@@ -102,4 +102,15 @@ Default input shape is `(256, 256, 3)`. For 1-channel input use `(256, 256, 1)`.
 
 ## Citation
 
-If you use this code in your research, please cite the accompanying paper (IEEE Access).
+If you use this code in your research, please cite:
+
+```bib
+@article{swin_deeplabv3,
+  title   = {Swin-DeepLabV3: Enhanced Semantic Segmentation Through Global-Local Feature Fusion Using Swin Transformer and Atrous Spatial Pyramid Pooling},
+  author  = {Tran Cao Minh and Ha Minh Tan and Nguyen Huynh Thong and Kien Cao-Van and Si Duy Truong and Thi Ngoc My Truong and Dinh Thang Nguyen and Tuan Anh Huynh},
+  journal = {},
+  year    = {},
+  volume  = {},
+  pages   = {}
+}
+```
