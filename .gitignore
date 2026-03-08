@@ -50,8 +50,9 @@ checkpoints/
 logs/
 runs/
 
-# Dataset (bỏ comment nếu không muốn push file .npy lên git)
-# dataset/
+# Dataset (uncomment to avoid pushing .npy data)
+dataset/
+dataset_chuan/
 # *.npy
 
 # Misc

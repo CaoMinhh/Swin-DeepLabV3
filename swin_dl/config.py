@@ -3,7 +3,7 @@ Default configuration for Swin-DeepLabV3.
 Import and modify before creating the model if needed.
 """
 # Default model config
-DEFAULT_INPUT_SHAPE = (256, 256, 3)
+DEFAULT_INPUT_SHAPE = (256, 256, 1)
 DEFAULT_NUM_CLASSES = 1
 DEFAULT_EMBED_DIM = 64
 DEFAULT_DEPTHS = [2, 2, 3, 2]
