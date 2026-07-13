@@ -1,0 +1,5 @@
+tensorflow[and-cuda]==2.16.1
+numpy>=1.24
+pillow>=10.0
+matplotlib>=3.7
+tensorboard>=2.21

@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.ipynb
+
+# Virtual env
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# TensorFlow / Keras
+*.keras
+*.h5
+*.pb
+checkpoints/
+logs/
+runs/
+
+# Training outputs
+outputs/
+ablation_results/
+benchmark_results/
+
+# Figures: ignore heavy PDFs but keep PNGs used in README
+figures/*.pdf
+
+# Dataset (download separately — see README)
+dataset/
+dataset_chuan/
+*.npy
+*.zip
+
+# Misc
+*.log
+.cache/
