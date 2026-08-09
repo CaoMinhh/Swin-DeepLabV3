@@ -8,7 +8,7 @@ TensorFlow/Keras implementation of **Swin-DeepLabV3** for breast ultrasound lesi
 
 > **Paper:** *Swin-DeepLabV3: Enhanced Semantic Segmentation Through Global-Local Feature Fusion Using Swin Transformer and Atrous Spatial Pyramid Pooling*  
 > **Authors:** Tran Cao Minh, Ha Minh Tan, Kien Cao-Van, Nguyen Huynh Thong, Si Duy Truong, Thi Ngoc My Truong, Dinh Thang Nguyen, and Tuan Anh Huynh  
-> **Status:** Manuscript under review  
+> **Status:** Accepted for publication in **IEEE Access** on August 2, 2026  
 > **Year:** 2026
 
 ---
