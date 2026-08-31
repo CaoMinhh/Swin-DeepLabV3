@@ -7,9 +7,11 @@
 TensorFlow/Keras implementation of **Swin-DeepLabV3** for breast ultrasound lesion segmentation.
 
 > **Paper:** *Swin-DeepLabV3: Enhanced Semantic Segmentation Through Global-Local Feature Fusion Using Swin Transformer and Atrous Spatial Pyramid Pooling*  
-> **Authors:** Tran Cao Minh, Ha Minh Tan, Kien Cao-Van, Nguyen Huynh Thong, Si Duy Truong, Thi Ngoc My Truong, Dinh Thang Nguyen, and Tuan Anh Huynh  
-> **Status:** Accepted for publication in **IEEE Access** on August 2, 2026  
-> **Year:** 2026
+> **Authors:** Tran Cao Minh, Ha Minh Tan, Kien Cao-Van, Nguyen Huynh Thong, Si Duy Truong, Thi Ngoc My Truong, Dinh Thang Nguyen, and Tuan Anh Huynh.
+
+> **Abstract:** Accurate medical image segmentation relies on precise boundary delineation and effective contextual modeling across multiple spatial scales. Conventional convolutional neural network-based architectures, such as U-Net, are effective at capturing local spatial details but are limited in modeling long-range dependencies due to their restricted receptive fields. Transformer-based approaches have recently shown potential in addressing this limitation by enabling global feature interactions; however, their direct application to dense prediction tasks often introduces high computational cost and challenges in multi-scale representation learning. This paper proposes Swin-DeepLabV3, a hybrid semantic segmentation framework that integrates global and local feature modeling by combining a hierarchical Swin Transformer encoder with an Atrous Spatial Pyramid Pooling-based context module. The Swin Transformer encoder employs shifted window self-attention to capture long-range dependencies while preserving hierarchical multi-scale representations. To enhance contextual understanding, the Atrous Spatial Pyramid Pooling module is incorporated at the bottleneck to aggregate spatial information at multiple dilation rates. A lightweight decoder with skip connections is then used to fuse high-level semantic features with low-level spatial details, supporting improved boundary localization. The proposed approach is evaluated on three public breast ultrasound datasets, namely BUSI, BUS-B, and BUS-BRA, under a 5-fold cross-validation protocol. Experimental results show that Swin-DeepLabV3 achieves strong overlap performance across datasets, with the best Dice scores of 83.54%, 88.49%, and 77.13% on BUS-B, BUS-BRA, and BUSI, respectively. The proposed architecture demonstrates an effective balance between contextual representation and spatial precision for medical image segmentation tasks. The implementation of the proposed method is publicly available at https://github.com/CaoMinhh/Swin-DeepLabV3
+
+
 
 ---
 
@@ -41,37 +43,6 @@ The method is evaluated on three breast ultrasound datasets: **BUSI**, **BUS-B**
 
 *The Swin Transformer encoder extracts hierarchical low-level and high-level features. The ASPP module aggregates multi-scale context, while the decoder combines semantic and spatial information to produce a binary lesion mask.*
 
-```text
-Input image (256 × 256 × 3)
-        │
-        ▼
-┌──────────────────────────────┐
-│ Swin Transformer Encoder     │
-│ Patch embedding              │
-│ 4 hierarchical stages        │
-│ Shifted-window attention     │
-└──────────────┬───────────────┘
-               │
-               ├── Low-level features
-               │
-               └── High-level features
-                         │
-                         ▼
-┌──────────────────────────────┐
-│ ASPP Context Module          │
-│ Dilation rates: 6, 12, 18    │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│ Lightweight Decoder          │
-│ Upsampling + skip fusion     │
-└──────────────┬───────────────┘
-               │
-               ▼
-Binary segmentation mask
-(256 × 256 × 1)
-```
 
 | Component | Configuration |
 |---|---|
@@ -388,15 +359,13 @@ To improve reproducibility, use the same settings reported in the paper, includi
 - fold-wise model selection based only on validation data;
 - final metric aggregation across all folds.
 
-The current repository includes the core training, evaluation, and inference pipeline. Additional scripts or fold definitions required to reproduce the exact paper protocol may be released separately.
+The current repository includes the core training, evaluation, and inference pipeline. 
 
 ---
 
 ## Pretrained Models
 
 Pretrained checkpoints are not currently included in this repository.
-
-Model weights may be released after completion of the publication process.
 
 ---
 
@@ -406,14 +375,16 @@ If this repository contributes to your research, please consider citing the pape
 
 ```bibtex
 @article{minh2026swindeeplabv3,
-  title   = {Swin-DeepLabV3: Enhanced Semantic Segmentation Through Global-Local Feature Fusion Using Swin Transformer and Atrous Spatial Pyramid Pooling},
-  author  = {Tran Cao Minh and Ha Minh Tan and Kien Cao-Van and Nguyen Huynh Thong and Si Duy Truong and Thi Ngoc My Truong and Dinh Thang Nguyen and Tuan Anh Huynh},
-  year    = {2026},
-  note    = {Manuscript under review}
-}
+  author={Cao Minh, Tran and Tan, Ha Minh and Cao-Van, Kien and Thong, Nguyen Huynh and Truong, Si Duy and Truong, Thi Ngoc My and Nguyen, Dinh Thang and Huynh, Tuan Anh},
+  journal={IEEE Access}, 
+  title={Swin-DeepLabV3: Enhanced Semantic Segmentation Through Global-Local Feature Fusion Using Swin Transformer and Atrous Spatial Pyramid Pooling}, 
+  year={2026},
+  volume={14},
+  number={},
+  pages={129256-129272},
+  doi={10.1109/ACCESS.2026.3722618}
+  }
 ```
-
-The citation information will be updated after publication.
 
 ---
 
